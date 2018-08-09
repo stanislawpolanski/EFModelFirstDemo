@@ -51,6 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Course.cs">
+      <DependentUpon>ModelFirstDemoDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enrollement.cs">
+      <DependentUpon>ModelFirstDemoDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirstDemoDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelFirstDemoDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirstDemoDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelFirstDemoDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModelFirstDemoDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -58,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs">
+      <DependentUpon>ModelFirstDemoDB.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -69,6 +88,22 @@
       <DependentUpon>ModelFirstDemoDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelFirstDemoDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelFirstDemoDB.Context.cs</LastGenOutput>
+      <DependentUpon>ModelFirstDemoDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="ModelFirstDemoDB.edmx.sql" />
+    <Content Include="ModelFirstDemoDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelFirstDemoDB.cs</LastGenOutput>
+      <DependentUpon>ModelFirstDemoDB.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
