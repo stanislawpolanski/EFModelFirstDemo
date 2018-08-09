@@ -10,6 +10,7 @@ namespace EFModelFirstDemo
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
